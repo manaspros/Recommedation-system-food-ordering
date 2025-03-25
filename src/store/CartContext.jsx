@@ -61,7 +61,15 @@ export function CartContextProvider({ children }) {
   const [cart, dispatchCartAction] = useReducer(cartReducer, { items: [] });
 
   function addItem(item) {
-    dispatchCartAction({ type: 'ADD_ITEM', item });
+    console.log("Adding item to cart with price:", item.price);
+
+    // Ensure price is stored as paise (smallest currency unit)
+    const itemWithValidPrice = {
+      ...item,
+      price: item.price
+    };
+
+    dispatchCartAction({ type: 'ADD_ITEM', item: itemWithValidPrice });
   }
 
   function removeItem(id) {

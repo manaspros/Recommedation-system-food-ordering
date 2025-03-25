@@ -11,15 +11,27 @@ export default function MealItem({ meal, isRecommended, isHealthy }) {
   const [isAddedToCart, setIsAddedToCart] = useState(false); // New state for cart message
 
   function handleAddMealToCart() {
-    cartCtx.addItem(meal);
-    setIsAnimating(true);
-    setIsAddedToCart(true); // Show "Added to Cart"
+    setIsAddedToCart(true);
 
-    // Remove animation and revert the message after 1 second
+    console.log("Adding meal to cart:", {
+      id: meal.id,
+      name: meal.name,
+      price: meal.price,
+      image: meal.image
+    });
+
+    cartCtx.addItem({
+      id: meal.id,
+      name: meal.name,
+      price: meal.price, // Make sure this is in the smallest currency unit (paise)
+      image: meal.image,
+      quantity: 1
+    });
+
+    // Reset the "Added to Cart" text after 2 seconds
     setTimeout(() => {
-      setIsAnimating(false);
-      setIsAddedToCart(false); // Revert back to "Add to Cart"
-    }, 1000); // 1 second delay
+      setIsAddedToCart(false);
+    }, 2000);
   }
 
   return (

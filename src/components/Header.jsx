@@ -55,7 +55,7 @@ export default function Header() {
         <div id="title">
           <img src={logoImg} alt="A restaurant" />
           <Link to="/">
-            <h1>Tandoori Club</h1>
+            <h1>Food Club</h1>
           </Link>
         </div>
         <nav>

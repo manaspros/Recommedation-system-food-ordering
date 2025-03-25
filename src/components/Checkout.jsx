@@ -49,37 +49,50 @@ export default function Checkout() {
   }
 
   const makePayment = async () => {
-    const stripe = await stripePromise;
+    try {
+      const stripe = await stripePromise;
 
-    const body = {
-      products: cartCtx.items
-    };
+      // Log the cart items before sending
+      console.log("Cart items before checkout:", cartCtx.items);
 
-    const headers = {
-      "Content-Type": "application/json"
-    };
+      const body = {
+        products: cartCtx.items
+      };
 
-    const response = await fetch(`${apiURL}/create-checkout-session`, {
-      method: "POST",
-      headers: headers,
-      body: JSON.stringify(body),
-    });
+      const headers = {
+        "Content-Type": "application/json"
+      };
 
-    if (!response.ok) {
-      const errorData = await response.json();
-      console.error("Error creating checkout session:", errorData);
-      return; // Exit if there's an error
-    }
+      console.log("Sending to checkout API:", JSON.stringify(body));
 
-    const session = await response.json();
+      const response = await fetch(`${apiURL}/create-checkout-session`, {
+        method: "POST",
+        headers: headers,
+        body: JSON.stringify(body),
+      });
 
-    // Redirect to the Stripe Checkout page using the session ID
-    const { error } = await stripe.redirectToCheckout({
-      sessionId: session.id,
-    });
+      if (!response.ok) {
+        const errorData = await response.json();
+        console.error("Error creating checkout session:", errorData);
+        alert(`Checkout error: ${errorData.message || 'Unknown error'}`);
+        return;
+      }
 
-    if (error) {
-      console.error("Error during Stripe Checkout:", error);
+      const session = await response.json();
+      console.log("Received session ID:", session.id);
+
+      // Redirect to the Stripe Checkout page
+      const { error } = await stripe.redirectToCheckout({
+        sessionId: session.id,
+      });
+
+      if (error) {
+        console.error("Stripe redirect error:", error);
+        alert(`Payment error: ${error.message}`);
+      }
+    } catch (error) {
+      console.error("Error in checkout process:", error);
+      alert("Error creating checkout session: " + (error.message || 'Unknown error'));
     }
   };
 

@@ -1,145 +1,364 @@
 [
-    {
-        "id": "test-order-1",
-        "customer": {
-            "name": "Test User",
-            "email": "test@example.com",
-            "street": "Test Street",
-            "postal-code": "12345"
-        },
-        "items": [
-            {
-                "id": "m1",
-                "name": "Mac & Cheese",
-                "price": 100,
-                "quantity": 2
-            },
-            {
-                "id": "m2",
-                "name": "Margherita Pizza",
-                "price": 200,
-                "quantity": 1
-            }
-        ],
-        "date": "2023-12-01T10:30:00.000Z"
+  {
+    "id": "test-order-1",
+    "customer": {
+      "name": "Test User",
+      "email": "test@example.com",
+      "street": "Test Street",
+      "postal-code": "12345"
     },
-    {
-        "items": [
-            {
-                "id": "m2",
-                "name": "Margherita Pizza",
-                "price": 200,
-                "description": "A classic pizza with fresh mozzarella, tomatoes, and basil on a thin and crispy crust.",
-                "image": "images/margherita-pizza.jpg",
-                "nutritionalInfo": {
-                    "calories": 260,
-                    "protein": 21,
-                    "carbs": 28,
-                    "fat": 8,
-                    "fiber": 6
-                },
-                "tags": [
-                    "italian",
-                    "healthy"
-                ],
-                "allergens": [],
-                "category": "italian",
-                "quantity": 1
-            },
-            {
-                "id": "m5",
-                "name": "Veggie Burger",
-                "price": 150,
-                "description": "A juicy veggie patty served on a whole grain bun with lettuce, tomato, and a tangy sauce.",
-                "image": "images/veggie-burger.jpg",
-                "nutritionalInfo": {
-                    "calories": 242,
-                    "protein": 24,
-                    "carbs": 37,
-                    "fat": 16,
-                    "fiber": 6
-                },
-                "tags": [
-                    "american",
-                    "popular"
-                ],
-                "allergens": [],
-                "category": "american",
-                "quantity": 1
-            },
-            {
-                "id": "m9",
-                "name": "Chicken Curry",
-                "price": 170,
-                "image": "images/chicken-curry.jpg",
-                "quantity": 1
-            }
-        ],
-        "customer": {
-            "name": "Manas Choudhary",
-            "email": "manasnandchoudhary@gmail.com",
-            "street": "raman",
-            "postal-code": "322"
+    "items": [
+      {
+        "id": "m1",
+        "name": "Mac & Cheese",
+        "price": 100,
+        "quantity": 2
+      },
+      {
+        "id": "m2",
+        "name": "Margherita Pizza",
+        "price": 200,
+        "quantity": 1
+      }
+    ],
+    "date": "2023-12-01T10:30:00.000Z"
+  },
+  {
+    "items": [
+      {
+        "id": "m2",
+        "name": "Margherita Pizza",
+        "price": 200,
+        "description": "A classic pizza with fresh mozzarella, tomatoes, and basil on a thin and crispy crust.",
+        "image": "images/margherita-pizza.jpg",
+        "nutritionalInfo": {
+          "calories": 260,
+          "protein": 21,
+          "carbs": 28,
+          "fat": 8,
+          "fiber": 6
         },
-        "id": "324.2208186224287",
-        "date": "2023-12-15T14:45:00.000Z"
+        "tags": [
+          "italian",
+          "healthy"
+        ],
+        "allergens": [],
+        "category": "italian",
+        "quantity": 1
+      },
+      {
+        "id": "m5",
+        "name": "Veggie Burger",
+        "price": 150,
+        "description": "A juicy veggie patty served on a whole grain bun with lettuce, tomato, and a tangy sauce.",
+        "image": "images/veggie-burger.jpg",
+        "nutritionalInfo": {
+          "calories": 242,
+          "protein": 24,
+          "carbs": 37,
+          "fat": 16,
+          "fiber": 6
+        },
+        "tags": [
+          "american",
+          "popular"
+        ],
+        "allergens": [],
+        "category": "american",
+        "quantity": 1
+      },
+      {
+        "id": "m9",
+        "name": "Chicken Curry",
+        "price": 170,
+        "image": "images/chicken-curry.jpg",
+        "quantity": 1
+      }
+    ],
+    "customer": {
+      "name": "Manas Choudhary",
+      "email": "manasnandchoudhary@gmail.com",
+      "street": "raman",
+      "postal-code": "322"
     },
-    {
-        "items": [
-            {
-                "id": "m4",
-                "name": "Spaghetti Carbonara",
-                "price": 140,
-                "description": "Al dente spaghetti with a creamy sauce made from egg yolk, pecorino cheese, pancetta, and pepper.",
-                "image": "images/spaghetti-carbonara.jpg",
-                "nutritionalInfo": {
-                    "calories": 603,
-                    "protein": 15,
-                    "carbs": 30,
-                    "fat": 6,
-                    "fiber": 4
-                },
-                "tags": [],
-                "allergens": [
-                    "dairy"
-                ],
-                "category": "other",
-                "quantity": 1
-            },
-            {
-                "id": "m3",
-                "name": "Caesar Salad",
-                "price": 150,
-                "description": "Romaine lettuce tossed in Caesar dressing, topped with croutons and parmesan shavings.",
-                "image": "images/caesar-salad.jpg",
-                "nutritionalInfo": {
-                    "calories": 462,
-                    "protein": 34,
-                    "carbs": 52,
-                    "fat": 16,
-                    "fiber": 4
-                },
-                "tags": [
-                    "high-protein"
-                ],
-                "allergens": [],
-                "category": "other",
-                "quantity": 1
-            },
-            {
-                "id": "m20",
-                "name": "Falafel Wrap",
-                "price": 100,
-                "image": "images/falafel-wrap.jpg",
-                "quantity": 1
-            }
-        ],
-        "customer": {
-            "name": "Manas Choudhary",
-            "email": "manasnandchoudhary@gmail.com",
-            "street": "vsasva",
-            "postal-code": "222"
+    "id": "324.2208186224287",
+    "date": "2023-12-15T14:45:00.000Z",
+    "completed": true,
+    "completedAt": "2025-03-25T16:56:38.946Z"
+  },
+  {
+    "items": [
+      {
+        "id": "m4",
+        "name": "Spaghetti Carbonara",
+        "price": 140,
+        "description": "Al dente spaghetti with a creamy sauce made from egg yolk, pecorino cheese, pancetta, and pepper.",
+        "image": "images/spaghetti-carbonara.jpg",
+        "nutritionalInfo": {
+          "calories": 603,
+          "protein": 15,
+          "carbs": 30,
+          "fat": 6,
+          "fiber": 4
         },
-        "id": "689.8509480916106"
-    }
+        "tags": [],
+        "allergens": [
+          "dairy"
+        ],
+        "category": "other",
+        "quantity": 1
+      },
+      {
+        "id": "m3",
+        "name": "Caesar Salad",
+        "price": 150,
+        "description": "Romaine lettuce tossed in Caesar dressing, topped with croutons and parmesan shavings.",
+        "image": "images/caesar-salad.jpg",
+        "nutritionalInfo": {
+          "calories": 462,
+          "protein": 34,
+          "carbs": 52,
+          "fat": 16,
+          "fiber": 4
+        },
+        "tags": [
+          "high-protein"
+        ],
+        "allergens": [],
+        "category": "other",
+        "quantity": 1
+      },
+      {
+        "id": "m20",
+        "name": "Falafel Wrap",
+        "price": 100,
+        "image": "images/falafel-wrap.jpg",
+        "quantity": 1
+      }
+    ],
+    "customer": {
+      "name": "Manas Choudhary",
+      "email": "manasnandchoudhary@gmail.com",
+      "street": "vsasva",
+      "postal-code": "222"
+    },
+    "id": "689.8509480916106"
+  },
+  {
+    "items": [
+      {
+        "id": "m2",
+        "name": "Margherita Pizza",
+        "price": 200,
+        "description": "A classic pizza with fresh mozzarella, tomatoes, and basil on a thin and crispy crust.",
+        "image": "images/margherita-pizza.jpg",
+        "nutritionalInfo": {
+          "calories": 260,
+          "protein": 21,
+          "carbs": 28,
+          "fat": 8,
+          "fiber": 6
+        },
+        "tags": [
+          "italian",
+          "healthy"
+        ],
+        "allergens": [],
+        "category": "italian",
+        "quantity": 1
+      },
+      {
+        "id": "m1",
+        "name": "Mac & Cheese",
+        "price": 100,
+        "description": "Creamy cheddar cheese mixed with perfectly cooked macaroni, topped with crispy breadcrumbs. A classic comfort food.",
+        "image": "images/mac-and-cheese.jpg",
+        "nutritionalInfo": {
+          "calories": 509,
+          "protein": 19,
+          "carbs": 50,
+          "fat": 12,
+          "fiber": 2
+        },
+        "tags": [],
+        "allergens": [
+          "dairy"
+        ],
+        "category": "other",
+        "quantity": 1
+      }
+    ],
+    "customer": {
+      "name": "Manas Choudhary",
+      "email": "manasnandchoudhary@gmail.com",
+      "street": "raman",
+      "postal-code": "322"
+    },
+    "id": "1742922411275.20354931999635295",
+    "date": "2025-03-25T17:06:51.275Z"
+  },
+  {
+    "items": [
+      {
+        "id": "m2",
+        "name": "Margherita Pizza",
+        "price": 200,
+        "description": "A classic pizza with fresh mozzarella, tomatoes, and basil on a thin and crispy crust.",
+        "image": "images/margherita-pizza.jpg",
+        "nutritionalInfo": {
+          "calories": 260,
+          "protein": 21,
+          "carbs": 28,
+          "fat": 8,
+          "fiber": 6
+        },
+        "tags": [
+          "italian",
+          "healthy"
+        ],
+        "allergens": [],
+        "category": "italian",
+        "quantity": 1
+      },
+      {
+        "id": "m1",
+        "name": "Mac & Cheese",
+        "price": 100,
+        "description": "Creamy cheddar cheese mixed with perfectly cooked macaroni, topped with crispy breadcrumbs. A classic comfort food.",
+        "image": "images/mac-and-cheese.jpg",
+        "nutritionalInfo": {
+          "calories": 509,
+          "protein": 19,
+          "carbs": 50,
+          "fat": 12,
+          "fiber": 2
+        },
+        "tags": [],
+        "allergens": [
+          "dairy"
+        ],
+        "category": "other",
+        "quantity": 1
+      }
+    ],
+    "customer": {
+      "name": "Manas Choudhary",
+      "email": "manasnandchoudhary@gmail.com",
+      "street": "raman ",
+      "postal-code": "322"
+    },
+    "id": "1742922528854.5950858291585119",
+    "date": "2025-03-25T17:08:48.854Z"
+  },
+  {
+    "items": [
+      {
+        "id": "m1",
+        "name": "Mac & Cheese",
+        "price": 100,
+        "image": "images/mac-and-cheese.jpg",
+        "quantity": 1
+      },
+      {
+        "id": "m2",
+        "name": "Margherita Pizza",
+        "price": 200,
+        "image": "images/margherita-pizza.jpg",
+        "quantity": 1
+      }
+    ],
+    "customer": {
+      "name": "Manas Choudhary",
+      "email": "manasnandchoudhary@gmail.com",
+      "street": "raman",
+      "postal-code": "342"
+    },
+    "id": "1742922602046.4603916219150732",
+    "date": "2025-03-25T17:10:02.046Z"
+  },
+  {
+    "items": [
+      {
+        "id": "m1",
+        "name": "Mac & Cheese",
+        "price": 100,
+        "image": "images/mac-and-cheese.jpg",
+        "quantity": 1
+      },
+      {
+        "id": "m2",
+        "name": "Margherita Pizza",
+        "price": 200,
+        "image": "images/margherita-pizza.jpg",
+        "quantity": 1
+      }
+    ],
+    "customer": {
+      "name": "Manas Choudhary",
+      "email": "manasnandchoudhary@gmail.com",
+      "street": "raman",
+      "postal-code": "422"
+    },
+    "id": "1742922807119.48638643370613655",
+    "date": "2025-03-25T17:13:27.119Z"
+  },
+  {
+    "items": [
+      {
+        "id": "m3",
+        "name": "Caesar Salad",
+        "price": 150,
+        "image": "images/caesar-salad.jpg",
+        "quantity": 1
+      },
+      {
+        "id": "m2",
+        "name": "Margherita Pizza",
+        "price": 200,
+        "image": "images/margherita-pizza.jpg",
+        "quantity": 1
+      }
+    ],
+    "customer": {
+      "name": "manas study",
+      "email": "manasstudy00@gmail.com",
+      "street": "raman",
+      "postal-code": "111"
+    },
+    "id": "1742922928445.958416135568497",
+    "date": "2025-03-25T17:15:28.445Z"
+  },
+  {
+    "items": [
+      {
+        "id": "m1",
+        "name": "Mac & Cheese",
+        "price": 100,
+        "image": "images/mac-and-cheese.jpg",
+        "quantity": 1
+      },
+      {
+        "id": "m2",
+        "name": "Margherita Pizza",
+        "price": 200,
+        "image": "images/margherita-pizza.jpg",
+        "quantity": 1
+      },
+      {
+        "id": "m17",
+        "name": "Mushroom Risotto",
+        "price": 70,
+        "image": "images/mushroom-risotto.jpg",
+        "quantity": 1
+      }
+    ],
+    "customer": {
+      "name": "manas study",
+      "email": "manasstudy00@gmail.com",
+      "street": "ramna",
+      "postal-code": "222"
+    },
+    "id": "1742923022515.9841547429118533",
+    "date": "2025-03-25T17:17:02.515Z"
+  }
 ]
