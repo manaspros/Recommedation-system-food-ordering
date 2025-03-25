@@ -1,0 +1,113 @@
+.summaryContainer {
+  padding: 1rem;
+}
+
+.updateTime {
+  color: #777;
+  font-size: 0.8rem;
+  margin-bottom: 1.5rem;
+  text-align: right;
+}
+
+.cardsContainer {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.summaryCard {
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  padding: 1.5rem;
+  transition: transform 0.2s, box-shadow 0.2s;
+  display: flex;
+  align-items: center;
+}
+
+.summaryCard:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.cardIcon {
+  font-size: 2rem;
+  margin-right: 1rem;
+}
+
+.cardContent {
+  flex: 1;
+}
+
+.cardContent h3 {
+  margin: 0;
+  font-size: 1rem;
+  color: #666;
+}
+
+.cardValue {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin: 0.5rem 0 0;
+}
+
+.quickActions {
+  margin-top: 2rem;
+}
+
+.actionButtons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.actionButton {
+  background-color: #4361ee;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 0.8rem 1.5rem;
+  cursor: pointer;
+  transition: background-color 0.2s;
+  font-weight: 500;
+}
+
+.actionButton:hover {
+  background-color: #3a56d4;
+}
+
+.loading {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 400px;
+  font-size: 1.2rem;
+  color: #666;
+}
+
+.error {
+  background-color: #fee;
+  border-left: 4px solid #e74c3c;
+  padding: 1rem;
+  margin: 1rem 0;
+  color: #c0392b;
+}
+
+.noData {
+  text-align: center;
+  margin: 2rem 0;
+  color: #666;
+}
+
+@media (max-width: 768px) {
+  .cardsContainer {
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  }
+
+  .actionButtons {
+    flex-direction: column;
+    align-items: stretch;
+  }
+}

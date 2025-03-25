@@ -1,0 +1,85 @@
+[
+    {
+        "id": "test-order-1",
+        "customer": {
+            "name": "Test User",
+            "email": "test@example.com",
+            "street": "Test Street",
+            "postal-code": "12345"
+        },
+        "items": [
+            {
+                "id": "m1",
+                "name": "Mac & Cheese",
+                "price": 100,
+                "quantity": 2
+            },
+            {
+                "id": "m2",
+                "name": "Margherita Pizza",
+                "price": 200,
+                "quantity": 1
+            }
+        ]
+    },
+    {
+        "items": [
+            {
+                "id": "m2",
+                "name": "Margherita Pizza",
+                "price": 200,
+                "description": "A classic pizza with fresh mozzarella, tomatoes, and basil on a thin and crispy crust.",
+                "image": "images/margherita-pizza.jpg",
+                "nutritionalInfo": {
+                    "calories": 260,
+                    "protein": 21,
+                    "carbs": 28,
+                    "fat": 8,
+                    "fiber": 6
+                },
+                "tags": [
+                    "italian",
+                    "healthy"
+                ],
+                "allergens": [],
+                "category": "italian",
+                "quantity": 1
+            },
+            {
+                "id": "m5",
+                "name": "Veggie Burger",
+                "price": 150,
+                "description": "A juicy veggie patty served on a whole grain bun with lettuce, tomato, and a tangy sauce.",
+                "image": "images/veggie-burger.jpg",
+                "nutritionalInfo": {
+                    "calories": 242,
+                    "protein": 24,
+                    "carbs": 37,
+                    "fat": 16,
+                    "fiber": 6
+                },
+                "tags": [
+                    "american",
+                    "popular"
+                ],
+                "allergens": [],
+                "category": "american",
+                "quantity": 1
+            },
+            {
+                "id": "m9",
+                "name": "Chicken Curry",
+                "price": 170,
+                "image": "images/chicken-curry.jpg",
+                "quantity": 1
+            }
+        ],
+        "customer": {
+            "name": "Manas Choudhary",
+            "email": "manasnandchoudhary@gmail.com",
+            "street": "raman",
+            "postal-code": "322"
+        },
+        "id": "324.2208186224287"
+    }
+]

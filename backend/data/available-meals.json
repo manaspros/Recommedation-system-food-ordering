@@ -1,0 +1,412 @@
+[
+  {
+    "id": "m1",
+    "name": "Mac & Cheese",
+    "price": 100,
+    "description": "Creamy cheddar cheese mixed with perfectly cooked macaroni, topped with crispy breadcrumbs. A classic comfort food.",
+    "image": "images/mac-and-cheese.jpg",
+    "nutritionalInfo": {
+      "calories": 509,
+      "protein": 19,
+      "carbs": 50,
+      "fat": 12,
+      "fiber": 2
+    },
+    "tags": [],
+    "allergens": [
+      "dairy"
+    ],
+    "category": "other"
+  },
+  {
+    "id": "m2",
+    "name": "Margherita Pizza",
+    "price": 200,
+    "description": "A classic pizza with fresh mozzarella, tomatoes, and basil on a thin and crispy crust.",
+    "image": "images/margherita-pizza.jpg",
+    "nutritionalInfo": {
+      "calories": 260,
+      "protein": 21,
+      "carbs": 28,
+      "fat": 8,
+      "fiber": 6
+    },
+    "tags": [
+      "italian",
+      "healthy"
+    ],
+    "allergens": [],
+    "category": "italian"
+  },
+  {
+    "id": "m3",
+    "name": "Caesar Salad",
+    "price": 150,
+    "description": "Romaine lettuce tossed in Caesar dressing, topped with croutons and parmesan shavings.",
+    "image": "images/caesar-salad.jpg",
+    "nutritionalInfo": {
+      "calories": 462,
+      "protein": 34,
+      "carbs": 52,
+      "fat": 16,
+      "fiber": 4
+    },
+    "tags": [
+      "high-protein"
+    ],
+    "allergens": [],
+    "category": "other"
+  },
+  {
+    "id": "m4",
+    "name": "Spaghetti Carbonara",
+    "price": 140,
+    "description": "Al dente spaghetti with a creamy sauce made from egg yolk, pecorino cheese, pancetta, and pepper.",
+    "image": "images/spaghetti-carbonara.jpg",
+    "nutritionalInfo": {
+      "calories": 603,
+      "protein": 15,
+      "carbs": 30,
+      "fat": 6,
+      "fiber": 4
+    },
+    "tags": [],
+    "allergens": [
+      "dairy"
+    ],
+    "category": "other"
+  },
+  {
+    "id": "m5",
+    "name": "Veggie Burger",
+    "price": 150,
+    "description": "A juicy veggie patty served on a whole grain bun with lettuce, tomato, and a tangy sauce.",
+    "image": "images/veggie-burger.jpg",
+    "nutritionalInfo": {
+      "calories": 242,
+      "protein": 24,
+      "carbs": 37,
+      "fat": 16,
+      "fiber": 6
+    },
+    "tags": [
+      "american",
+      "popular"
+    ],
+    "allergens": [],
+    "category": "american"
+  },
+  {
+    "id": "m6",
+    "name": "Grilled Chicken Sandwich",
+    "price": 150,
+    "description": "Tender grilled chicken breast with avocado, bacon, lettuce, and honey mustard on a toasted bun.",
+    "image": "images/grilled-chicken-sandwich.jpg",
+    "nutritionalInfo": {
+      "calories": 572,
+      "protein": 24,
+      "carbs": 37,
+      "fat": 12,
+      "fiber": 3
+    },
+    "tags": [],
+    "allergens": [],
+    "category": "other"
+  },
+  {
+    "id": "m7",
+    "name": "Steak Frites",
+    "price": 130,
+    "description": "Succulent steak cooked to your preference, served with crispy golden fries and herb butter.",
+    "image": "images/steak-frites.jpg",
+    "nutritionalInfo": {
+      "calories": 508,
+      "protein": 19,
+      "carbs": 55,
+      "fat": 3,
+      "fiber": 4
+    },
+    "tags": [],
+    "allergens": [],
+    "category": "other"
+  },
+  {
+    "id": "m8",
+    "name": "Sushi Roll Platter",
+    "price": 140,
+    "description": "An assortment of fresh sushi rolls including California, Spicy Tuna, and Eel Avocado.",
+    "image": "images/sushi-roll-platter.jpg",
+    "nutritionalInfo": {
+      "calories": 567,
+      "protein": 15,
+      "carbs": 39,
+      "fat": 23,
+      "fiber": 2
+    },
+    "tags": [
+      "japanese"
+    ],
+    "allergens": [
+      "seafood"
+    ],
+    "category": "japanese"
+  },
+  {
+    "id": "m9",
+    "name": "Chicken Curry",
+    "price": 170,
+    "description": "Tender pieces of chicken simmered in a rich and aromatic curry sauce, served with basmati rice.",
+    "image": "images/chicken-curry.jpg",
+    "nutritionalInfo": {
+      "calories": 176,
+      "protein": 21,
+      "carbs": 18,
+      "fat": 25,
+      "fiber": 7
+    },
+    "tags": [
+      "indian",
+      "low-carb",
+      "high-fiber",
+      "popular"
+    ],
+    "allergens": [],
+    "category": "indian"
+  },
+  {
+    "id": "m10",
+    "name": "Vegan Buddha Bowl",
+    "price": 180,
+    "description": "A hearty bowl filled with quinoa, roasted veggies, avocado, and a tahini dressing.",
+    "image": "images/vegan-buddha-bowl.jpg",
+    "nutritionalInfo": {
+      "calories": 597,
+      "protein": 8,
+      "carbs": 60,
+      "fat": 18,
+      "fiber": 8
+    },
+    "tags": [
+      "vegan",
+      "vegetarian",
+      "high-fiber"
+    ],
+    "allergens": [],
+    "category": "other"
+  },
+  {
+    "id": "m11",
+    "name": "Seafood Paella",
+    "price": 120,
+    "description": "A Spanish delicacy filled with saffron-infused rice, shrimp, mussels, and chorizo.",
+    "image": "images/seafood-paella.jpg",
+    "nutritionalInfo": {
+      "calories": 562,
+      "protein": 14,
+      "carbs": 41,
+      "fat": 9,
+      "fiber": 1
+    },
+    "tags": [
+      "spanish"
+    ],
+    "allergens": [
+      "seafood"
+    ],
+    "category": "spanish"
+  },
+  {
+    "id": "m12",
+    "name": "Pancake Stack",
+    "price": 100,
+    "description": "Fluffy pancakes stacked high, drizzled with maple syrup and topped with fresh berries.",
+    "image": "images/pancake-stack.jpg",
+    "nutritionalInfo": {
+      "calories": 559,
+      "protein": 34,
+      "carbs": 50,
+      "fat": 22,
+      "fiber": 4
+    },
+    "tags": [
+      "high-protein",
+      "dessert",
+      "popular"
+    ],
+    "allergens": [
+      "gluten"
+    ],
+    "category": "other"
+  },
+  {
+    "id": "m13",
+    "name": "Miso Ramen",
+    "price": 90,
+    "description": "A warming bowl of ramen with miso broth, tender pork, soft-boiled egg, and green onions.",
+    "image": "images/miso-ramen.jpg",
+    "nutritionalInfo": {
+      "calories": 502,
+      "protein": 29,
+      "carbs": 29,
+      "fat": 5,
+      "fiber": 8
+    },
+    "tags": [
+      "japanese",
+      "high-protein",
+      "high-fiber",
+      "popular"
+    ],
+    "allergens": [],
+    "category": "japanese"
+  },
+  {
+    "id": "m14",
+    "name": "Beef Tacos",
+    "price": 80,
+    "description": "Three soft tortillas filled with seasoned beef, fresh salsa, cheese, and sour cream.",
+    "image": "images/beef-tacos.jpg",
+    "nutritionalInfo": {
+      "calories": 250,
+      "protein": 28,
+      "carbs": 14,
+      "fat": 16,
+      "fiber": 8
+    },
+    "tags": [
+      "mexican",
+      "high-protein",
+      "low-carb",
+      "high-fiber"
+    ],
+    "allergens": [],
+    "category": "mexican"
+  },
+  {
+    "id": "m15",
+    "name": "Chocolate Brownie",
+    "price": 60,
+    "description": "A rich and fudgy brownie, topped with a scoop of vanilla ice cream and chocolate sauce.",
+    "image": "images/chocolate-brownie.jpg",
+    "nutritionalInfo": {
+      "calories": 587,
+      "protein": 7,
+      "carbs": 45,
+      "fat": 15,
+      "fiber": 3
+    },
+    "tags": [
+      "dessert"
+    ],
+    "allergens": [
+      "gluten"
+    ],
+    "category": "other"
+  },
+  {
+    "id": "m16",
+    "name": "Lobster Bisque",
+    "price": 80,
+    "description": "A creamy soup made from lobster stock, aromatic vegetables, and a touch of brandy.",
+    "image": "images/lobster-bisque.jpg",
+    "nutritionalInfo": {
+      "calories": 462,
+      "protein": 25,
+      "carbs": 27,
+      "fat": 22,
+      "fiber": 8
+    },
+    "tags": [
+      "high-fiber"
+    ],
+    "allergens": [
+      "seafood"
+    ],
+    "category": "other"
+  },
+  {
+    "id": "m17",
+    "name": "Mushroom Risotto",
+    "price": 70,
+    "description": "Creamy Arborio rice cooked with a medley of wild mushrooms and finished with parmesan.",
+    "image": "images/mushroom-risotto.jpg",
+    "nutritionalInfo": {
+      "calories": 557,
+      "protein": 33,
+      "carbs": 43,
+      "fat": 8,
+      "fiber": 4
+    },
+    "tags": [
+      "vegetarian",
+      "high-protein",
+      "popular"
+    ],
+    "allergens": [],
+    "category": "other"
+  },
+  {
+    "id": "m18",
+    "name": "Eggplant Parmesan",
+    "price": 70,
+    "description": "Layers of breaded eggplant, marinara sauce, and melted mozzarella and parmesan cheeses.",
+    "image": "images/eggplant-parmesan.jpg",
+    "nutritionalInfo": {
+      "calories": 438,
+      "protein": 12,
+      "carbs": 30,
+      "fat": 9,
+      "fiber": 8
+    },
+    "tags": [
+      "vegetarian",
+      "high-fiber",
+      "popular"
+    ],
+    "allergens": [
+      "gluten"
+    ],
+    "category": "other"
+  },
+  {
+    "id": "m19",
+    "name": "Lemon Cheesecake",
+    "price": 70,
+    "description": "A creamy cheesecake with a tangy lemon flavor, served on a crumbly biscuit base.",
+    "image": "images/lemon-cheesecake.jpg",
+    "nutritionalInfo": {
+      "calories": 583,
+      "protein": 11,
+      "carbs": 36,
+      "fat": 19,
+      "fiber": 6
+    },
+    "tags": [
+      "dessert"
+    ],
+    "allergens": [
+      "dairy"
+    ],
+    "category": "other"
+  },
+  {
+    "id": "m20",
+    "name": "Falafel Wrap",
+    "price": 100,
+    "description": "Crispy falafels wrapped in a warm pita with lettuce, tomatoes, and a tahini sauce.",
+    "image": "images/falafel-wrap.jpg",
+    "nutritionalInfo": {
+      "calories": 360,
+      "protein": 28,
+      "carbs": 22,
+      "fat": 15,
+      "fiber": 3
+    },
+    "tags": [
+      "vegetarian",
+      "high-protein"
+    ],
+    "allergens": [],
+    "category": "other"
+  }
+]

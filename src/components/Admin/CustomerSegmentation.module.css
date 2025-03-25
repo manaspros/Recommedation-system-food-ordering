@@ -1,0 +1,161 @@
+.customerSegmentationContainer {
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  padding: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.customersOverview {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.overviewCard {
+  background-color: #f8f9fa;
+  border-radius: 8px;
+  padding: 1.5rem;
+  text-align: center;
+}
+
+.overviewCard h3 {
+  margin: 0 0 0.5rem;
+  font-size: 1rem;
+  color: #666;
+}
+
+.overviewValue {
+  margin: 0;
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: #333;
+}
+
+.segmentationCharts {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+  margin-bottom: 2rem;
+}
+
+.chartContainer {
+  background-color: #f8f9fa;
+  border-radius: 8px;
+  padding: 1rem;
+}
+
+.chartContainer h3 {
+  margin: 0 0 1rem;
+  text-align: center;
+  font-size: 1rem;
+  color: #666;
+}
+
+.pieChartWrapper {
+  height: 300px;
+  display: flex;
+  justify-content: center;
+}
+
+.customerTableSection {
+  margin-top: 2rem;
+}
+
+.tableControls {
+  margin-bottom: 1rem;
+}
+
+.searchInput {
+  width: 100%;
+  max-width: 400px;
+  padding: 0.5rem;
+  border-radius: 4px;
+  border: 1px solid #ddd;
+  font-size: 0.9rem;
+  margin-bottom: 1rem;
+}
+
+.tableWrapper {
+  overflow-x: auto;
+}
+
+.customerTable {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.customerTable th,
+.customerTable td {
+  padding: 0.75rem;
+  text-align: left;
+  border-bottom: 1px solid #eee;
+}
+
+.customerTable th {
+  background-color: #f8f9fa;
+}
+
+.sortable {
+  cursor: pointer;
+}
+
+.sortable:hover {
+  background-color: #e9ecef;
+}
+
+.actionButtons {
+  margin-top: 2rem;
+  display: flex;
+  justify-content: flex-end;
+  gap: 1rem;
+}
+
+.actionButton {
+  background-color: #4361ee;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  transition: background-color 0.2s;
+  font-size: 0.9rem;
+}
+
+.actionButton:hover {
+  background-color: #3a56d4;
+}
+
+.loading {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 300px;
+  font-size: 1.2rem;
+  color: #666;
+}
+
+.error {
+  background-color: #fee;
+  border-left: 4px solid #e74c3c;
+  padding: 1rem;
+  margin: 1rem 0;
+  color: #c0392b;
+}
+
+@media (max-width: 768px) {
+  .segmentationCharts,
+  .customersOverview {
+    grid-template-columns: 1fr;
+  }
+
+  .actionButtons {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .pieChartWrapper {
+    height: 200px;
+  }
+}

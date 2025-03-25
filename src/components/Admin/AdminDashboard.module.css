@@ -1,0 +1,22 @@
+.adminDashboard {
+  display: flex;
+  min-height: 100vh;
+  background-color: #f8f9fa;
+  color: #333;
+}
+
+.mainContent {
+  flex: 1;
+  padding: 0;
+  overflow-y: auto;
+}
+
+.dashboardContent {
+  padding: 1.5rem;
+}
+
+@media (max-width: 768px) {
+  .adminDashboard {
+    flex-direction: column;
+  }
+}

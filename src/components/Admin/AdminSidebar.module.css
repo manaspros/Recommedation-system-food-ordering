@@ -1,0 +1,98 @@
+.adminSidebar {
+  width: 250px;
+  background: #343a40;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  position: sticky;
+  top: 0;
+}
+
+.logo {
+  padding: 1.5rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.logo h2 {
+  margin: 0;
+  font-size: 1.5rem;
+}
+
+.navMenu {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  flex-grow: 1;
+}
+
+.navItem {
+  display: flex;
+  align-items: center;
+  padding: 1rem 1.5rem;
+  cursor: pointer;
+  transition: background-color 0.2s;
+  color: #adb5bd;
+}
+
+.navItem:hover {
+  background-color: rgba(255, 255, 255, 0.05);
+  color: #fff;
+}
+
+.active {
+  background-color: rgba(255, 255, 255, 0.1);
+  color: #fff;
+  border-left: 4px solid #4361ee;
+}
+
+.icon {
+  margin-right: 0.75rem;
+  font-size: 1.2rem;
+  width: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.label {
+  flex-grow: 1;
+}
+
+.homeLink {
+  margin-top: auto;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.homeLink a {
+  text-decoration: none;
+  color: inherit;
+}
+
+@media (max-width: 768px) {
+  .adminSidebar {
+    width: 100%;
+    height: auto;
+    position: static;
+  }
+
+  .navMenu {
+    display: flex;
+    overflow-x: auto;
+    padding: 0.5rem;
+  }
+
+  .navItem {
+    padding: 0.75rem;
+    flex-direction: column;
+  }
+
+  .icon {
+    margin-right: 0;
+    margin-bottom: 0.25rem;
+  }
+
+  .homeLink {
+    display: none;
+  }
+}
