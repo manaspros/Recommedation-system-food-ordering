@@ -217,7 +217,7 @@ app.get("/success", async (req, res) => {
       );
 
       // Return a success message that the frontend will use
-      res.redirect(`http://localhost:5175/success?payment=success`);
+      res.redirect(`http://localhost:5173/success?payment=success`);
     } else {
       res.status(400).json({ message: "Payment not completed" });
     }

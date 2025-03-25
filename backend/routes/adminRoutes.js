@@ -9,57 +9,105 @@ const __dirname = dirname(__filename);
 
 const router = express.Router();
 
+// Log registered routes for debugging
+console.log("Admin routes being registered:");
+console.log(" - /dashboard/summary");
+console.log(" - /dashboard/sales-trends");
+console.log(" - /dashboard/popular-items");
+console.log(" - /dashboard/customer-insights");
+console.log(" - /dashboard/inventory-forecast");
+console.log(" - /dashboard/performance");
+
 // Authentication middleware for admin routes
 const authenticateAdmin = async (req, res, next) => {
   const { email } = req.query;
+  console.log("Auth middleware checking email:", email);
 
   // For demo purposes: Only specific users can access admin routes
   // In production, implement proper authentication with JWT or similar
   const adminEmails = ["admin@example.com", "manasnandchoudhary@gmail.com"];
 
   if (!email || !adminEmails.includes(email)) {
+    console.log("Authentication failed for email:", email);
     return res
       .status(403)
       .json({ message: "Access denied. Admin privileges required." });
   }
 
+  console.log("Authentication successful for email:", email);
   next();
 };
 
+// Apply middleware to all routes
 router.use(authenticateAdmin);
+
+// Helper function to safely read files
+async function readJsonFile(filePath) {
+  try {
+    console.log("Attempting to read file:", filePath);
+    const data = await fs.readFile(filePath, "utf8");
+    console.log(`Successfully read file: ${filePath}`);
+    return JSON.parse(data);
+  } catch (error) {
+    console.error(`Error reading file ${filePath}:`, error);
+    if (error.code === "ENOENT") {
+      console.error(`File not found: ${filePath}`);
+    }
+    throw error;
+  }
+}
 
 // Dashboard Summary - Key metrics
 router.get("/dashboard/summary", async (req, res) => {
+  console.log("Dashboard summary endpoint called");
   try {
-    // Load order data
+    // Load orders data
     const ordersPath = join(__dirname, "..", "data", "orders.json");
+    console.log("Orders path:", ordersPath);
+
+    // Check if file exists
+    try {
+      await fs.access(ordersPath);
+      console.log("Orders file exists");
+    } catch (error) {
+      console.error("Orders file does not exist:", error.message);
+    }
+
+    const orders = await readJsonFile(ordersPath).catch(() => []);
+
+    // Load successful payments data
     const successPath = join(__dirname, "..", "data", "success.json");
+    console.log("Success path:", successPath);
 
-    const ordersData = await fs.readFile(ordersPath, "utf8");
-    const successData = await fs.readFile(successPath, "utf8");
+    // Check if file exists
+    try {
+      await fs.access(successPath);
+      console.log("Success file exists");
+    } catch (error) {
+      console.error("Success file does not exist:", error.message);
+    }
 
-    const orders = JSON.parse(ordersData);
-    const successfulPayments = JSON.parse(successData);
+    const successfulPayments = await readJsonFile(successPath).catch(() => []);
 
-    // Calculate metrics
+    // Calculate dashboard metrics
+    console.log(
+      `Found ${orders.length} orders and ${successfulPayments.length} payments`
+    );
+
     const totalOrders = orders.length;
+    const totalRevenue = successfulPayments.reduce(
+      (sum, payment) => sum + (payment.amount_total || 0) / 100,
+      0
+    );
 
-    // Calculate total revenue from successful payments
-    const totalRevenue =
-      successfulPayments.reduce(
-        (sum, payment) => sum + (payment.amount_total || 0),
-        0
-      ) / 100; // Convert cents to dollars/rupees
+    // Get unique customer count
+    const uniqueCustomers = new Set(
+      orders.map((order) => order.customer?.email).filter(Boolean)
+    ).size;
 
-    // Calculate average order value
-    const avgOrderValue =
-      totalOrders > 0 ? (totalRevenue / totalOrders).toFixed(2) : 0;
+    const avgOrderValue = totalOrders > 0 ? totalRevenue / totalOrders : 0;
 
-    // Count unique customers
-    const uniqueCustomers = new Set(orders.map((order) => order.customer.email))
-      .size;
-
-    res.json({
+    const responseData = {
       totalOrders,
       totalRevenue,
       avgOrderValue,
@@ -70,15 +118,22 @@ router.get("/dashboard/summary", async (req, res) => {
       completedOrders: successfulPayments.length,
       conversionRate:
         ((successfulPayments.length / totalOrders) * 100).toFixed(2) + "%",
-    });
+    };
+
+    console.log("Sending summary response:", responseData);
+    res.json(responseData);
   } catch (error) {
     console.error("Error generating dashboard summary:", error);
-    res.status(500).json({ message: "Failed to generate dashboard summary" });
+    res.status(500).json({
+      message: "Failed to generate dashboard summary",
+      error: error.message,
+    });
   }
 });
 
 // Sales Trends - Daily/Weekly/Monthly data
 router.get("/dashboard/sales-trends", async (req, res) => {
+  console.log("Sales trends endpoint called with period:", req.query.period);
   try {
     const { period = "daily" } = req.query;
 
@@ -149,6 +204,7 @@ router.get("/dashboard/sales-trends", async (req, res) => {
 
 // Popular Items - Most ordered products
 router.get("/dashboard/popular-items", async (req, res) => {
+  console.log("Popular items endpoint called");
   try {
     // Load orders and meals data
     const ordersPath = join(__dirname, "..", "data", "orders.json");
@@ -206,6 +262,7 @@ router.get("/dashboard/popular-items", async (req, res) => {
 
 // Customer Insights - User ordering patterns
 router.get("/dashboard/customer-insights", async (req, res) => {
+  console.log("Customer insights endpoint called");
   try {
     // Load orders data
     const ordersPath = join(__dirname, "..", "data", "orders.json");
@@ -298,6 +355,7 @@ router.get("/dashboard/customer-insights", async (req, res) => {
 
 // Inventory Forecast - Projected inventory needs
 router.get("/dashboard/inventory-forecast", async (req, res) => {
+  console.log("Inventory forecast endpoint called");
   try {
     // Load orders and meals data
     const ordersPath = join(__dirname, "..", "data", "orders.json");
@@ -373,6 +431,7 @@ router.get("/dashboard/inventory-forecast", async (req, res) => {
 
 // Performance metrics endpoint
 router.get("/dashboard/performance", async (req, res) => {
+  console.log("Performance metrics endpoint called");
   try {
     // This would normally pull from a performance tracking system
     // For demo, we'll generate some realistic metrics
@@ -417,6 +476,20 @@ router.get("/dashboard/performance", async (req, res) => {
   } catch (error) {
     console.error("Error generating performance metrics:", error);
     res.status(500).json({ message: "Failed to generate performance metrics" });
+  }
+});
+
+// Debug endpoint to verify router is working
+router.get("/test", (req, res) => {
+  res.json({ message: "Admin router is working properly" });
+});
+
+// Log all routes in this router for debugging
+console.log("Admin Router Routes:");
+router.stack.forEach((route) => {
+  if (route.route) {
+    const methods = Object.keys(route.route.methods).join(",").toUpperCase();
+    console.log(`${methods} /admin${route.route.path}`);
   }
 });
 

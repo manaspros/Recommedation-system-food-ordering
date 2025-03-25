@@ -1,8 +1,8 @@
 {
   "homepage": "http://manaspros.github.io/shop_project",
-  "name": "react-food-order",
+  "name": "recommendation-system-food-ordering",
   "private": true,
-  "version": "0.0.0",
+  "version": "1.0.0",
   "type": "module",
   "scripts": {
     "dev": "vite",
@@ -10,7 +10,10 @@
     "deploy": "gh-pages -d dist",
     "build": "vite build",
     "lint": "eslint . --ext js,jsx --report-unused-disable-directives --max-warnings 0",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "start:backend": "node backend/init.js",
+    "dev:backend": "nodemon --experimental-json-modules backend/init.js",
+    "setup:data": "node backend/data/create-data-folder.js"
   },
   "dependencies": {
     "@auth0/auth0-react": "^2.2.1",
@@ -39,7 +42,10 @@
     "react-chartjs-2": "^5.2.0",
     "chartjs-adapter-date-fns": "^3.0.0",
     "date-fns": "^3.0.0",
-    "react-icons": "^5.0.0"
+    "react-icons": "^5.0.0",
+    "express": "^4.18.2",
+    "cors": "^2.8.5",
+    "body-parser": "^1.20.2"
   },
   "devDependencies": {
     "@types/react": "^18.2.15",
@@ -53,6 +59,7 @@
     "gh-pages": "^6.2.0",
     "sass": "^1.80.4",
     "tailwindcss": "^3.4.14",
-    "vite": "^4.4.5"
+    "vite": "^4.4.5",
+    "nodemon": "^3.0.1"
   }
 }

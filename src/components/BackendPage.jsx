@@ -6,17 +6,29 @@ import { useAuth0 } from '@auth0/auth0-react';
 const BackendPage = () => {
   const { isAuthenticated, user, isLoading: authLoading } = useAuth0();
   const [orders, setOrders] = useState([]); // State to hold orders
+  const [isLoading, setIsLoading] = useState(false);
+  const [error, setError] = useState(null);
 
   const fetchOrders = async () => {
     try {
-      const response = await fetch('http://localhost:3000/orderget');
+      setIsLoading(true);
+      setError(null);
+
+      // Use the standard /orders endpoint instead of /orderget
+      const response = await fetch('http://localhost:3000/orders');
+
       if (!response.ok) {
-        throw new Error('Failed to fetch orders');
+        throw new Error(`Failed to fetch orders: ${response.status} ${response.statusText}`);
       }
+
       const data = await response.json();
-      setOrders(data); // Update orders state
+      console.log('Orders loaded successfully:', data.length);
+      setOrders(data);
     } catch (error) {
-      console.error(error);
+      console.error('Error fetching orders:', error);
+      setError(error.message);
+    } finally {
+      setIsLoading(false);
     }
   };
 

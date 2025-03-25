@@ -30,17 +30,21 @@ export default function AdminDashboard() {
                 setIsLoadingSummary(true);
                 setError(null);
 
+                console.log("Fetching summary data for:", user.email);
                 const response = await fetch(`http://localhost:3000/admin/dashboard/summary?email=${user.email}`);
 
                 if (!response.ok) {
-                    throw new Error('Failed to fetch dashboard summary');
+                    const errorText = await response.text();
+                    console.error("Server response:", errorText);
+                    throw new Error(`Failed to fetch dashboard summary: ${response.status} ${response.statusText}`);
                 }
 
                 const data = await response.json();
                 setSummaryData(data);
+                console.log("Summary data received:", data);
             } catch (error) {
                 console.error('Error fetching dashboard summary:', error);
-                setError('Failed to load dashboard summary. Please try again.');
+                setError(`Failed to load dashboard summary. Please try again. Details: ${error.message}`);
             } finally {
                 setIsLoadingSummary(false);
             }
